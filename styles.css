@@ -1,0 +1,357 @@
+/* ==========================================================================
+   HOJA DE ESTILOS PARA SÍNTESIS CURRICULAR (styles.css) - VERSIÓN FINAL
+   ========================================================================== */
+
+/* 1. Reseteo básico y configuración global */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f9;
+  color: #333333;
+  line-height: 1.6;
+  padding: 40px 20px;
+}
+
+/* 2. Contenedor Principal con CSS Grid */
+.cv-container {
+  max-width: 950px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 25px;
+  align-items: start;
+  text-align: justify;
+}
+
+/* 3. Estilos de Encabezados y Títulos */
+h1 {
+  color: #1a365d;
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+  line-height: 1.2;
+  text-align: justify;
+}
+
+h2 {
+  color: #2b6cb0;
+  font-size: 1.05rem;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 3px;
+  margin-top: 10px;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: justify;
+}
+
+h3 {
+  color: #2d3748;
+  font-size: 0.95rem;
+  margin-bottom: 3px;
+  margin-top: 6px;
+  text-align: justify;
+}
+
+p {
+  color: #4a5568;
+  margin-bottom: 5px;
+  font-size: 0.92rem;
+  line-height: 1.4;
+  text-align: justify;
+}
+
+li {
+  text-align: justify;
+  line-height: 1.4;
+}
+
+/* 4. Columna Izquierda */
+.columna-izquierda {
+  border-right: 1px solid #edf2f7;
+  padding-right: 15px;
+  text-align: justify;
+}
+
+/* Foto de Perfil estilo Carnet */
+.columna-izquierda img {
+  width: 125px;
+  height: 165px;
+  border-radius: 4px;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  margin: 0 auto 12px auto;
+  border: 2px solid #3182ce;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+/* Secciones de la columna izquierda */
+.columna-izquierda section {
+  margin-bottom: 12px;
+}
+
+.columna-izquierda ul {
+  list-style: none;
+  margin-bottom: 8px;
+}
+
+.columna-izquierda li {
+  font-size: 0.88rem;
+  margin-bottom: 5px;
+  color: #4a5568;
+  word-break: break-word;
+}
+
+.columna-izquierda a {
+  color: #3182ce;
+  text-decoration: none;
+}
+
+.columna-izquierda a:hover {
+  text-decoration: underline;
+}
+
+/* Barras de Nivel de Habilidad */
+.habilidad-item {
+  margin-bottom: 8px;
+}
+
+.habilidad-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 3px;
+}
+
+.nivel-texto {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: #718096;
+}
+
+/* Línea base clara */
+.barra-fondo {
+  width: 100%;
+  height: 6px;
+  background-color: #e2e8f0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* Línea de avance más oscura con degradado */
+.barra-progreso {
+  height: 100%;
+  background: linear-gradient(90deg, #3182ce, #2b6cb0);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+/* Blockquote (Manifiesto) */
+.manifesto blockquote {
+  background: #f0f9ff;
+  border-left: 4px solid #3498db;
+  padding: 8px 12px;
+  font-style: italic;
+  margin-top: 6px;
+  text-align: justify;
+}
+
+.manifesto blockquote p {
+  margin-bottom: 0;
+  font-size: 0.88rem;
+  line-height: 1.4;
+  text-align: justify;
+}
+
+/* 5. Columna Derecha */
+.columna-derecha header {
+  margin-bottom: 10px;
+  border-bottom: 2px solid #3182ce;
+  padding-bottom: 8px;
+}
+
+.columna-derecha header h1 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 4px;
+  text-align: justify;
+}
+
+.columna-derecha header br {
+  display: block;
+  margin: 2px 0;
+}
+
+.columna-derecha header p {
+  font-size: 0.95rem;
+  color: #4a5568;
+  margin-bottom: 2px;
+  text-align: justify;
+}
+
+/* Perfil Profesional */
+.perfil-profesional blockquote {
+  font-style: italic;
+  border-left: 4px solid #3498db;
+  padding: 8px 14px;
+  background: #f8f9fa;
+  margin: 6px 0;
+  line-height: 1.45;
+  text-align: justify;
+}
+
+.perfil-profesional blockquote strong {
+  color: #2b6cb0;
+}
+
+/* Competencias */
+.competencias article {
+  margin-bottom: 8px;
+}
+
+.competencias h3 {
+  color: #2d3748;
+  margin-bottom: 3px;
+  text-align: justify;
+}
+
+.competencias ul {
+  padding-left: 18px;
+  color: #4a5568;
+}
+
+.competencias li {
+  margin-bottom: 4px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  text-align: justify;
+}
+
+/* Impacto/Trayectoria */
+.impacto h3 {
+  margin-top: 10px;
+  margin-bottom: 4px;
+  color: #2b6cb0;
+  text-align: justify;
+}
+
+.impacto p {
+  margin-bottom: 4px;
+  text-align: justify;
+}
+
+.impacto ul {
+  padding-left: 18px;
+  margin-bottom: 8px;
+}
+
+.impacto li {
+  margin-bottom: 4px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  text-align: justify;
+}
+
+/* Secciones generales de columna derecha */
+.columna-derecha section {
+  margin-bottom: 12px;
+}
+
+.columna-derecha article {
+  margin-bottom: 8px;
+}
+
+/* 6. Diseño Responsivo */
+@media (max-width: 768px) {
+  body {
+    padding: 20px 15px;
+  }
+
+  .cv-container {
+    grid-template-columns: 1fr;
+    padding: 25px;
+    gap: 25px;
+  }
+
+  .columna-izquierda {
+    border-right: none;
+    border-bottom: 2px solid #edf2f7;
+    padding-right: 0;
+    padding-bottom: 30px;
+  }
+
+  .columna-izquierda img {
+    width: 150px;
+    height: 150px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .columna-derecha header h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* 7. Estilos del Botón de Impresión / PDF */
+.contenedor-imprimir {
+  text-align: center;
+  margin: 30px auto 20px auto;
+}
+
+#btn-imprimir {
+  background-color: #2b6cb0;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 26px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: inherit;
+}
+
+#btn-imprimir:hover {
+  background-color: #1a4971;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 8. Reglas de Impresión (Oculta el botón y optimiza para papel/PDF) */
+@media print {
+  .contenedor-imprimir,
+  #btn-imprimir {
+    display: none !important;
+  }
+
+  body {
+    background-color: #ffffff;
+    padding: 0;
+  }
+
+  .cv-container {
+    box-shadow: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+  }
+}
